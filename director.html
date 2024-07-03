@@ -197,18 +197,18 @@
     <!-- page title area end -->
 
     <main>
-        <section class="frequent-area mb-5">
+        <section class="frequent-area mb-5" style="margin-top: 20px;">
             <div class="container">
                 <div class="row">
                     <!-- Image on the left side now -->
-                    <div class="col-lg-6 mt-5 padding-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="col-lg-6 mt-5 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="about_wrapper__groups">
                             <img src="./assets/img/about/director2.jpg" class="rounded" alt="" style="height: 600px;">
                         </div>
                     </div>
 
                     <!-- Text on the right side now -->
-                    <div class="col-lg-6 padding-0 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                         <div class="main-part-2">
                             <div class="section_title_wrapper">
                                 <h2 class="section-title about-span mb-30">Message From Director</h2>
@@ -225,7 +225,7 @@
                     </div>
 
                     <!-- Full-width text section -->
-                    <div class="col-lg-12 padding-0 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                         <div class="main-part-2 top-0 start-0">
                             <div class="section_title_wrapper__about-content mb-40">
                                 <p style="text-align: justify;">From selecting the right course and institution to navigating the intricacies of visa applications and preparing for cultural adaptation, we are here to support you every step of the way. We take pride in our comprehensive
@@ -256,6 +256,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS to remove padding and adjust spacing -->
+    <style>
+        .frequent-area {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .about_wrapper__groups img,
+        .main-part-2 {
+            margin-top: 0;
+        }
+        
+        .col-lg-6.mt-5 {
+            margin-top: 0 !important;
+        }
+    </style>
 
     <!-- footer area start -->
     <!-- <footer class="footer ">
