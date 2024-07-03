@@ -92,7 +92,7 @@ body {
 .site-header {
     background: rgb(57, 81, 162);
     background: linear-gradient(90deg, rgba(57, 81, 162, 1) 37%, rgba(216, 11, 20) 74%);
-    color: #fff;
+    color: #0f0f0f;
     line-height: 0.5;
 }
 
