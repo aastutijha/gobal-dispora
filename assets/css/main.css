@@ -3247,7 +3247,7 @@ input.main-search-input:-ms-input-placeholder {
     font-size: 60px;
     line-height: 1.12;
     font-weight: 900;
-    color: var(--bg-blue);
+    color: #000;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3269,7 +3269,7 @@ input.main-search-input:-ms-input-placeholder {
     font-size: 16px;
     line-height: 30px;
     font-weight: 400;
-    color: var(--bg-blue);
+    color: #000;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
