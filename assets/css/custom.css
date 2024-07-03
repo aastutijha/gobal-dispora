@@ -1,7 +1,7 @@
     @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,500;1,700&amp;display=swap");
      :root {
-        --bg-blue: rgb(57,81,162);
-        --bg-pink: rgba(216, 11, 20);
+        --bg-blue: #3951A2;
+        --bg-pink: #D80B14;
     }
     
     html,
