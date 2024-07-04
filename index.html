@@ -1593,10 +1593,11 @@
 
 <title>Our Top Partner Universities</title>
     <style>
-        body {
+                body {
             font-family: Arial, sans-serif;
-            margin-left: 5px;
-            margin-right: 5px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         h1 {
             text-align: center;
@@ -1606,7 +1607,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
             margin-bottom: 30px;
         }
         .flag-button {
@@ -1629,7 +1630,7 @@
         }
         .university-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
         .university-logo {
@@ -1650,6 +1651,11 @@
             max-width: 80%;
             max-height: 80%;
             object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .university-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
