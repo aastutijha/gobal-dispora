@@ -8101,67 +8101,67 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 
 /* Styling input and textarea fields: full width, height, padding, border, border-radius, and margin */
+.faqfrm__visa-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
 
 .faqfrm__visa-form input,
 .faqfrm__visa-form textarea,
 .faqfrm__visa-form .select {
-    width: calc(100% - 40px); /* Adjust width to accommodate padding */
+    width: 100%;
     height: 60px;
     padding: 0 20px;
-    border: 1px solid #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 3px;
     margin-bottom: 20px;
     text-align: left;
-    /* Align text to the left inside input/textarea */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
 .faqfrm__visa-form input:focus,
 .faqfrm__visa-form textarea:focus,
 .faqfrm__visa-form .select:focus {
-    border-color: #E7EAEF;
+    border-color: #007bff;
+    outline: none;
 }
 
 .faqfrm__visa-form input::placeholder,
 .faqfrm__visa-form textarea::placeholder {
     color: #6f6f6f;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-    /* Align placeholder text to the left */
 }
 
 .faqfrm__visa-form textarea {
     height: 120px;
-    resize: none;
+    resize: vertical;
     padding: 15px 20px;
-    text-align: left;
-    /* Align text to the left inside textarea */
 }
 
 .faqfrm__visa-form .select {
-    background-color: #ffffff;
-    line-height: 60px;
     position: relative;
+    cursor: pointer;
+    background-color: white;
 }
 
 .faqfrm__visa-form .select::after {
-    content: '';
+    content: '\25BC';
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     right: 20px;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #000; /* Adjust arrow color */
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .faqfrm__visa-form .select .current {
     display: block;
-    padding: 0 20px;
-    line-height: 60px;
+    line-height: 58px;
+    color: #6f6f6f;
 }
 
 .faqfrm__visa-form .select .list {
@@ -8169,44 +8169,45 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
+    right: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
     border-top: none;
-    width: calc(100% - 2px); /* Adjust width to match parent width */
     max-height: 150px;
     overflow-y: auto;
     z-index: 10;
+    box-sizing: border-box;
 }
 
-.faqfrm__visa-form .select .list.visible {
+.faqfrm__visa-form .select.open .list {
     display: block;
 }
 
-.faqfrm__visa-form .select .list .option {
+.faqfrm__visa-form .select .option {
     padding: 10px 20px;
     cursor: pointer;
 }
 
-.faqfrm__visa-form .select ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.faqfrm__visa-form .select .option:hover {
+    background-color: #f0f0f0;
 }
 
-.faqfrm__visa-form .select ul li {
-    text-align: left;
+.faqfrm__visa-form button {
+    width: 100%;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Adjust alignment for the current text and dropdown arrow */
-
-.faqfrm__visa-form .select .current {
-    padding-right: 40px; /* Ensure space for the arrow */
+.faqfrm__visa-form button:hover {
+    background-color: #0056b3;
 }
 
-.faqfrm__visa-form .select::after {
-    top: calc(50% - 3px); /* Adjust arrow position */
-    right: 10px; /* Adjust arrow position */
-}
 
 /*----------------------------------------*/
 
