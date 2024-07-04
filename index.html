@@ -568,15 +568,15 @@
             </div>
 
             <!-- Content Column -->
-            <div class="image-column col-xl-4 col-lg-12 col-md-12 ">
+            <!-- <div class="image-column col-xl-4 col-lg-12 col-md-12 ">
                 <div class="inner-column wow fadeInLeft ">
                     <div class="image-box ">
                         <figure class="plane "><img src="https://www.globaldiaspora.edu.np/user/images/shapes/icon-plane.png " alt=" " style="height: 265px; "></figure>
                         <figure class="image img-bounce "><img src="https://www.globaldiaspora.edu.np/user/images/shapes/image-3.png " alt=" "></figure>
-                        <!-- <figure class="stemp "><img src="assets/images/shapes/testimonialprocess-one-shape-1.png " alt=" "></figure> -->
+                        <figure class="stemp "><img src="assets/images/shapes/testimonialprocess-one-shape-1.png " alt=" "></figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -1592,76 +1592,89 @@
 
 
 <title>Our Top Partner Universities</title>
-    <style>
-                body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #1a2b5f;
-        }
-        .region-flags {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        .flag-button {
-            display: flex;
-            align-items: center;
-            padding: 10px 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .flag-button:hover, .flag-button.active {
-            background-color: #1a2b5f;
-            color: white;
-        }
-        .flag-button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
+<style>
+    /* body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+     */
+    
+    h1 {
+        text-align: center;
+        color: #1a2b5f;
+    }
+    
+    .region-flags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .flag-button {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .flag-button:hover,
+    .flag-button.active {
+        background-color: #1a2b5f;
+        color: white;
+    }
+    
+    .flag-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    
+    .university-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .university-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+        background-color: white;
+    }
+    
+    .university-logo:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .university-logo img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+    
+    @media (max-width: 768px) {
         .university-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
         }
-        .university-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: box-shadow 0.3s;
-            background-color: white;
-        }
-        .university-logo:hover {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .university-logo img {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-        }
-        @media (max-width: 768px) {
-            .university-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
     <h1>Our Top Partner Universities</h1>
-    
+
     <div class="region-flags">
         <div class="flag-button active" data-region="usa">
             <img src="./assets/img/partner/usa.svg" alt="USA Flag"> USA
@@ -1679,83 +1692,195 @@
             <img src="./assets/img/partner/europe.svg" alt="Europe Flag"> Europe
         </div>
     </div>
-    
+
     <div id="universityGrid" class="university-grid">
         <!-- Universities will be dynamically inserted here -->
     </div>
 
     <script>
         const universities = {
-            usa: [
-                { name: "University of Cincinnati", logo: "./assets/img/partner/cin.png" },
-                { name: "Missouri S&T", logo: "./assets/img/partner/mis.png" },
-                { name: "San Jose State University", logo: "./assets/img/partner/sjsu.png" },
-                { name: "Ohio University", logo: "./assets/img/partner/ou.png" },
-                { name: "University of South Florida", logo: "./assets/img/partner/usf.png" },
-                { name: "Cleveland State University", logo: "./assets/img/partner/csu.png" },
-                { name: "California State University", logo: "./assets/img/partner/clsu.png" },
-                { name: "University of Tampa", logo: "./assets/img/partner/uot.png" },
-                { name: "Northeastern University", logo: "./assets/img/partner/neu.png" },
-                { name: "New Jersey Institute of Technology", logo: "./assets/img/partner/nj.png" },
-                { name: "George Mason University", logo: "./assets/img/partner/gmu.png" }
+            usa: [{
+                name: "University of Cincinnati",
+                logo: "./assets/img/partner/cin.png"
+            }, {
+                name: "Missouri S&T",
+                logo: "./assets/img/partner/mis.png"
+            }, {
+                name: "San Jose State University",
+                logo: "./assets/img/partner/sjsu.png"
+            }, {
+                name: "Ohio University",
+                logo: "./assets/img/partner/ou.png"
+            }, {
+                name: "University of South Florida",
+                logo: "./assets/img/partner/usf.png"
+            }, {
+                name: "Cleveland State University",
+                logo: "./assets/img/partner/csu.png"
+            }, {
+                name: "California State University",
+                logo: "./assets/img/partner/clsu.png"
+            }, {
+                name: "University of Tampa",
+                logo: "./assets/img/partner/uot.png"
+            }, {
+                name: "Northeastern University",
+                logo: "./assets/img/partner/neu.png"
+            }, {
+                name: "New Jersey Institute of Technology",
+                logo: "./assets/img/partner/nj.png"
+            }, {
+                name: "George Mason University",
+                logo: "./assets/img/partner/gmu.png"
+            }],
+
+            "uk-ireland": [{
+                name: "University Name",
+                logo: "./assets/img/partner/uk/au.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/bul.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/cranfield.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/dbs.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/du.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/lu.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/mu.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/nu.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/ues.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/uon.svg"
+            }, {
+                name: "University Name",
+                logo: "./assets/img/partner/uk/uorl.png"
+            }],
+            canada: [{
+                    name: "University ",
+                    logo: "./assets/img/partner/can/1.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/2.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/3.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/4.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/5.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/6.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/7.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/8.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/9.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/10.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/12.png"
+                }, {
+                    name: "University ",
+                    logo: "./assets/img/partner/can/11.png"
+                }
+
             ],
-            
-            "uk-ireland": [
-                { name: "University Name", logo: "./assets/img/partner/uk/au.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/bul.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/cranfield.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/dbs.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/du.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/lu.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/mu.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/nu.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/ues.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/uon.svg" },
-                { name: "University Name", logo: "./assets/img/partner/uk/uorl.png" }
-            ],
-            canada: [
-                { name: "University ", logo: "./assets/img/partner/can/1.png" },
-                { name: "University ", logo: "./assets/img/partner/can/2.png" },
-                { name: "University ", logo: "./assets/img/partner/can/3.png" },
-                { name: "University ", logo: "./assets/img/partner/can/4.png" },
-                { name: "University ", logo: "./assets/img/partner/can/5.png" },
-                { name: "University ", logo: "./assets/img/partner/can/6.png" },
-                { name: "University ", logo: "./assets/img/partner/can/7.png" },
-                { name: "University ", logo: "./assets/img/partner/can/8.png" },
-                { name: "University ", logo: "./assets/img/partner/can/9.png" },
-                { name: "University ", logo: "./assets/img/partner/can/10.png" },
-                { name: "University ", logo: "./assets/img/partner/can/12.png" },
-                { name: "University ", logo: "./assets/img/partner/can/11.png" }
-              
-            ],
-            "australia-nz": [
-            { name: "University ", logo: "./assets/img/partner/aus/1.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/2.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/3.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/4.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/5.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/6.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/7.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/8.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/9.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/10.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/12.png" },
-                { name: "University ", logo: "./assets/img/partner/aus/11.png" }
-            ],
-            europe: [
-            { name: "University ", logo: "./assets/img/partner/eur/1.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/2.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/3.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/4.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/5.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/6.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/7.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/8.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/9.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/10.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/12.png" },
-                { name: "University ", logo: "./assets/img/partner/eur/11.png" }
-            ]
+            "australia-nz": [{
+                name: "University ",
+                logo: "./assets/img/partner/aus/1.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/2.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/3.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/4.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/5.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/6.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/7.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/8.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/9.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/10.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/12.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/aus/11.png"
+            }],
+            europe: [{
+                name: "University ",
+                logo: "./assets/img/partner/eur/1.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/2.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/3.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/4.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/5.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/6.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/7.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/8.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/9.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/10.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/12.png"
+            }, {
+                name: "University ",
+                logo: "./assets/img/partner/eur/11.png"
+            }]
         };
 
         function displayUniversities(region) {
