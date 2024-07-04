@@ -229,129 +229,140 @@
                                 </div>
                                 <div class="faqfrm__visa-form">
                                     <form action="#">
-                                        <input type="text" placeholder="Name*">
-                                        <input type="email" placeholder="Email*">
-                                        <input type="email" placeholder="Phone*">
-                                        <select style="display: none;">
-                                        <option> Subject</option>
-                                        <option> Choose an option</option>
-                                        <option> Choose an option</option>
-                                        <option> Choose an option</option>
-                                        <option> Choose an option</option>
-                                    </select>
-                                        <div class="nice-select" tabindex="0"><span class="current"> Subject</span>
+                                        <input type="text" placeholder="Name*" required>
+                                        <input type="email" placeholder="Email*" required>
+                                        <input type="tel" placeholder="Phone*" required>
+                                        <div class="select" tabindex="0">
+                                            <span class="current">Subject</span>
                                             <ul class="list">
-                                                <li data-value="Subject" class="option selected focus"> Subject</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
+                                                <li class="option" data-value="Subject">Subject</li>
+                                                <li class="option" data-value="Option 1">Option 1</li>
+                                                <li class="option" data-value="Option 2">Option 2</li>
+                                                <li class="option" data-value="Option 3">Option 3</li>
+                                                <li class="option" data-value="Option 4">Option 4</li>
                                             </ul>
                                         </div>
-                                        <textarea cols="30" rows="10"></textarea>
-                                        <button class="theme-btn" type="submit">Submit Now</button>
+                                        <textarea placeholder="Message"></textarea>
+                                        <button type="submit">Submit Now</button>
                                     </form>
                                 </div>
-                            </div>
 
+                                <script>
+                                    document.querySelector('.select').addEventListener('click', function() {
+                                        this.classList.toggle('open');
+                                    });
+
+                                    document.querySelectorAll('.option').forEach(option => {
+                                        option.addEventListener('click', function() {
+                                            this.closest('.select').querySelector('.current').textContent = this.textContent;
+                                        });
+                                    });
+
+                                    document.addEventListener('click', function(e) {
+                                        if (!e.target.closest('.select')) {
+                                            document.querySelector('.select').classList.remove('open');
+                                        }
+                                    });
+                                </script>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-xxl-8 col-xl-8 col-lg-8">
-                        <div class="sidebar__deatils">
-                            <div class="visa-details">
-                                <div class="visa-deatils__thumb mb-40">
-                                    <img src="assets/img/country-img/vivo4.jpg" alt="">
+                        <div class="col-xxl-8 col-xl-8 col-lg-8">
+                            <div class="sidebar__deatils">
+                                <div class="visa-details">
+                                    <div class="visa-deatils__thumb mb-40">
+                                        <img src="assets/img/country-img/vivo4.jpg" alt="">
+                                    </div>
+                                    <p class="mb-30">Under Partner Visa Stream, the applicant may be sponsored by their Australian spouse or interdependent partner, who must be an Australian citizen, resident in Australia. Once a temporary partner visa is issued, it is
+                                        valid for the entire waiting period until the immigration department decides on your permanent partner visa application. Once you have been approved by a Visa Permanent Partner, you can stay in Australia with benefits.
+                                        You must apply for a temporary and permanent visa, which you can do by completing the application and sending it to the right bodies so that it can be reviewed. If you have met the criteria for this Australian visa
+                                        after the assessment, a temporary partner visa can be provided to you.
+                                    </p>
+
+
+
                                 </div>
-                                <p class="mb-30">Under Partner Visa Stream, the applicant may be sponsored by their Australian spouse or interdependent partner, who must be an Australian citizen, resident in Australia. Once a temporary partner visa is issued, it is valid
-                                    for the entire waiting period until the immigration department decides on your permanent partner visa application. Once you have been approved by a Visa Permanent Partner, you can stay in Australia with benefits. You
-                                    must apply for a temporary and permanent visa, which you can do by completing the application and sending it to the right bodies so that it can be reviewed. If you have met the criteria for this Australian visa after
-                                    the assessment, a temporary partner visa can be provided to you.
-                                </p>
 
+                                <div class="necessary">
+                                    <div class="row">
 
+                                        <div class="col-xxl-12 col-xl-12">
+                                            <div class="necessary__box">
+                                                <h4 class="necessary__title mb-25">
+                                                    Necessary Documents
+                                                </h4>
+                                                <ul class="necessary-link mb-20">
+                                                    <li><i class="fal fa-check-square"></i> Two Recently taken photos must be attach</li>
+                                                    <li><i class="fal fa-check-square"></i> A valid passport</li>
+                                                    <li><i class="fal fa-check-square"></i> Travel insurance policy</li>
+                                                    <li><i class="fal fa-check-square"></i> Proof of accommodation </li>
+                                                    <li><i class="fal fa-check-square"></i> Proof of paid visa fee</li>
+                                                </ul>
 
-                            </div>
-
-                            <div class="necessary">
-                                <div class="row">
-
-                                    <div class="col-xxl-12 col-xl-12">
-                                        <div class="necessary__box">
-                                            <h4 class="necessary__title mb-25">
-                                                Necessary Documents
-                                            </h4>
-                                            <ul class="necessary-link mb-20">
-                                                <li><i class="fal fa-check-square"></i> Two Recently taken photos must be attach</li>
-                                                <li><i class="fal fa-check-square"></i> A valid passport</li>
-                                                <li><i class="fal fa-check-square"></i> Travel insurance policy</li>
-                                                <li><i class="fal fa-check-square"></i> Proof of accommodation </li>
-                                                <li><i class="fal fa-check-square"></i> Proof of paid visa fee</li>
-                                            </ul>
-
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="business-according">
-                                <div class="tab-content mb-30">
-                                    <div class="tab-pane fade show active">
-                                        <div class="faq-content faq-white">
-                                            <div class="accordion" id="accordionExample">
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingOne">
-                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="business-according">
+                                    <div class="tab-content mb-30">
+                                        <div class="tab-pane fade show active">
+                                            <div class="faq-content faq-white">
+                                                <div class="accordion" id="accordionExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                     How long does it take for a Transit Visa to process?
                                                 </button>
-                                                    </h2>
-                                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
-                                                            The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals and circumstances influence how long it takes to apply
-                                                            for a business visa.
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals and circumstances influence how long it takes to apply
+                                                                for a business visa.
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTwo">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             What is the purpose of the United States Business visa?
                                         </button>
-                                                    </h2>
-                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
-                                                            <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
-                                                                and circumstances influence how long it takes to apply for a business visa. </p>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
+                                                                    and circumstances influence how long it takes to apply for a business visa. </p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             If the applicant is intending to stay more than 3 months?
                                         </button>
-                                                    </h2>
-                                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
-                                                            <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
-                                                                and circumstances influence how long it takes to apply for a business visa. </p>
+                                                        </h2>
+                                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
+                                                                    and circumstances influence how long it takes to apply for a business visa. </p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingThree1">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree1">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
                                                 What are the important things to know as a Transit Visa applicant?
                                             </button>
-                                                    </h2>
-                                                    <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
-                                                            <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
-                                                                and circumstances influence how long it takes to apply for a business visa. </p>
+                                                        </h2>
+                                                        <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>The European business visa is mainly for people who want to participate in business meetings, conferences in Europe. Visa holders are not allowed to work or seek employment in Europe. Individuals
+                                                                    and circumstances influence how long it takes to apply for a business visa. </p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -361,8 +372,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- business area end here -->
+            <!-- business area end here -->
 
     </main>
 

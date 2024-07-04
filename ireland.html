@@ -228,29 +228,41 @@
                                 </div>
                                 <div class="faqfrm__visa-form">
                                     <form action="#">
-                                        <input type="text" placeholder="Name*">
-                                        <input type="email" placeholder="Email*">
-                                        <input type="email" placeholder="Phone*">
-                                        <select style="display: none;">
-                                    <option> Subject</option>
-                                    <option> Choose an option</option>
-                                    <option> Choose an option</option>
-                                    <option> Choose an option</option>
-                                    <option> Choose an option</option>
-                                </select>
-                                        <div class="nice-select" tabindex="0"><span class="current"> Subject</span>
+                                        <input type="text" placeholder="Name*" required>
+                                        <input type="email" placeholder="Email*" required>
+                                        <input type="tel" placeholder="Phone*" required>
+                                        <div class="select" tabindex="0">
+                                            <span class="current">Subject</span>
                                             <ul class="list">
-                                                <li data-value="Subject" class="option selected focus"> Subject</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
-                                                <li data-value="Choose an option" class="option"> Choose an option</li>
+                                                <li class="option" data-value="Subject">Subject</li>
+                                                <li class="option" data-value="Option 1">Option 1</li>
+                                                <li class="option" data-value="Option 2">Option 2</li>
+                                                <li class="option" data-value="Option 3">Option 3</li>
+                                                <li class="option" data-value="Option 4">Option 4</li>
                                             </ul>
                                         </div>
-                                        <textarea cols="30" rows="10"></textarea>
-                                        <button class="theme-btn ">Submit Now</button>
+                                        <textarea placeholder="Message"></textarea>
+                                        <button type="submit">Submit Now</button>
                                     </form>
                                 </div>
+
+                                <script>
+                                    document.querySelector('.select').addEventListener('click', function() {
+                                        this.classList.toggle('open');
+                                    });
+
+                                    document.querySelectorAll('.option').forEach(option => {
+                                        option.addEventListener('click', function() {
+                                            this.closest('.select').querySelector('.current').textContent = this.textContent;
+                                        });
+                                    });
+
+                                    document.addEventListener('click', function(e) {
+                                        if (!e.target.closest('.select')) {
+                                            document.querySelector('.select').classList.remove('open');
+                                        }
+                                    });
+                                </script>
                             </div>
 
                         </div>
