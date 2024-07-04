@@ -8103,8 +8103,9 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 /* Styling input and textarea fields: full width, height, padding, border, border-radius, and margin */
 
 .faqfrm__visa-form input,
-.faqfrm__visa-form textarea {
-    width: 100%;
+.faqfrm__visa-form textarea,
+.faqfrm__visa-form .select {
+    width: calc(100% - 40px); /* Adjust width to accommodate padding */
     height: 60px;
     padding: 0 20px;
     border: 1px solid #ffffff;
@@ -8112,18 +8113,14 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     margin-bottom: 20px;
     text-align: left;
     /* Align text to the left inside input/textarea */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-
-
-/* Styling input and textarea fields when focused: changing border color */
 
 .faqfrm__visa-form input:focus,
-.faqfrm__visa-form textarea:focus {
+.faqfrm__visa-form textarea:focus,
+.faqfrm__visa-form .select:focus {
     border-color: #E7EAEF;
 }
-
-
-/* Placeholder styling: color, font-size, and font-weight */
 
 .faqfrm__visa-form input::placeholder,
 .faqfrm__visa-form textarea::placeholder {
@@ -8134,9 +8131,6 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     /* Align placeholder text to the left */
 }
 
-
-/* Specific styling for textarea: height, no resize, and padding */
-
 .faqfrm__visa-form textarea {
     height: 120px;
     resize: none;
@@ -8145,51 +8139,74 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     /* Align text to the left inside textarea */
 }
 
-
-/* Styling for the nice-select dropdown: border, width, margin, height, line-height, padding, background color */
-
-.faqfrm__visa-form .nice-select {
-    border: 1px solid #ffffff;
-    width: 100%;
-    margin-bottom: 20px;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 20px;
+.faqfrm__visa-form .select {
     background-color: #ffffff;
-    text-align: left;
-    /* Align text inside the dropdown to the left */
+    line-height: 60px;
+    position: relative;
 }
 
-
-/* Ensuring the dropdown ul has full width */
-
-.faqfrm__visa-form .nice-select ul {
-    width: 100%;
-}
-
-
-/* Displaying dropdown list items as block elements */
-
-.faqfrm__visa-form .nice-select ul li {
-    display: block;
-    text-align: left;
-    /* Align text inside the dropdown list items to the left */
-}
-
-
-/* Styling the nice-select dropdown when focused: changing border color */
-
-.faqfrm__visa-form .nice-select:focus {
-    border-color: #E7EAEF;
-}
-
-
-/* Adjusting the position of the dropdown arrow */
-
-.faqfrm__visa-form .nice-select::after {
+.faqfrm__visa-form .select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000; /* Adjust arrow color */
 }
 
+.faqfrm__visa-form .select .current {
+    display: block;
+    padding: 0 20px;
+    line-height: 60px;
+}
+
+.faqfrm__visa-form .select .list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-top: none;
+    width: calc(100% - 2px); /* Adjust width to match parent width */
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.faqfrm__visa-form .select .list.visible {
+    display: block;
+}
+
+.faqfrm__visa-form .select .list .option {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.faqfrm__visa-form .select ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.faqfrm__visa-form .select ul li {
+    text-align: left;
+}
+
+/* Adjust alignment for the current text and dropdown arrow */
+
+.faqfrm__visa-form .select .current {
+    padding-right: 40px; /* Ensure space for the arrow */
+}
+
+.faqfrm__visa-form .select::after {
+    top: calc(50% - 3px); /* Adjust arrow position */
+    right: 10px; /* Adjust arrow position */
+}
 
 /*----------------------------------------*/
 
